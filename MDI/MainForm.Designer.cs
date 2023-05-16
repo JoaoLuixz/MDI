@@ -98,6 +98,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "MainForm";
             this.Text = "MDI";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStripMainForm.ResumeLayout(false);
             this.menuStripMainForm.PerformLayout();
             this.ResumeLayout(false);

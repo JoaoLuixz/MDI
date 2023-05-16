@@ -1,7 +1,9 @@
+using DAL;
 namespace MDI
 {
     public partial class MainForm : Form
     {
+        
         Agenda? AgendaForm;
         CEP? CEPForm;
         Sobre? SobreForm;
@@ -60,6 +62,11 @@ namespace MDI
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
