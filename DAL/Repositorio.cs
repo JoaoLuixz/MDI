@@ -20,6 +20,23 @@ namespace DAL
                 return _agenda.Find<Agenda>(filter).ToList<Agenda>();
             }
         }
+        public void Create(Agenda agenda)
+        {
+            _agenda.InsertOne(agenda);
+        }
+
+        public void Delete(Agenda agenda)
+        {
+            var filter = Builders<Agenda>.Filter.Eq("Id", agenda.Id);
+            _agenda.DeleteOne(filter);
+
+        }
+
+        public void Update(Agenda agenda)
+        {
+            var filter = Builders<Agenda>.Filter.Eq("Id", agenda.Id);
+            var update = Builders<Agenda>.Update.Set("Nome", agenda.Nome).Set("Telefone", agenda.Telefone).Set("Endereco", agenda.Endereco);
+        }
 
         public Repositorio()
         {

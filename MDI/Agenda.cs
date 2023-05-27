@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 
+
 namespace MDI
 {
     public partial class Agenda : Form
@@ -23,6 +24,43 @@ namespace MDI
         {
             repositorio = new Repositorio();
             bsAgenda.DataSource = repositorio;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            DAL.Agenda agenda = new DAL.Agenda(); frmDetalhes frm = new frmDetalhes();
+            frm.agenda = agenda;
+            frm.ShowDialog();
+
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                repositorio.Create(agenda);
+                bsAgenda.Add(agenda);
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var agenda = bsAgenda.Current as DAL.Agenda;
+            if (agenda != null)
+            {
+                repositorio.Delete(agenda);
+                bsAgenda.Remove(agenda);
+                bsAgenda.ResetBindings(false);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmDetalhes frm = new frmDetalhes();
+            frm.agenda = bsAgenda.Current as DAL.Agenda;
+            frm.ShowDialog();
+
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                repositorio.Update(frm.agenda);
+                bsAgenda.ResetBindings(false);
+            }
         }
     }
 }

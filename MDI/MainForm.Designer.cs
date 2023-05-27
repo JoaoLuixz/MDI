@@ -28,82 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStripMainForm = new System.Windows.Forms.MenuStrip();
-            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gfdgdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cEPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripMainForm.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            menuStripMainForm = new MenuStrip();
+            cadastroToolStripMenuItem = new ToolStripMenuItem();
+            gfdgdToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
+            cEPToolStripMenuItem = new ToolStripMenuItem();
+            sobreToolStripMenuItem = new ToolStripMenuItem();
+            menuStripMainForm.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStripMainForm
             // 
-            this.menuStripMainForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem,
-            this.cEPToolStripMenuItem,
-            this.sobreToolStripMenuItem});
-            this.menuStripMainForm.Location = new System.Drawing.Point(0, 0);
-            this.menuStripMainForm.Name = "menuStripMainForm";
-            this.menuStripMainForm.Size = new System.Drawing.Size(967, 24);
-            this.menuStripMainForm.TabIndex = 1;
-            this.menuStripMainForm.Text = "menuStrip1";
+            menuStripMainForm.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, cEPToolStripMenuItem, sobreToolStripMenuItem });
+            menuStripMainForm.Location = new Point(0, 0);
+            menuStripMainForm.Name = "menuStripMainForm";
+            menuStripMainForm.Size = new Size(1009, 24);
+            menuStripMainForm.TabIndex = 1;
+            menuStripMainForm.Text = "menuStrip1";
             // 
             // cadastroToolStripMenuItem
             // 
-            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gfdgdToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gfdgdToolStripMenuItem, sairToolStripMenuItem });
+            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            cadastroToolStripMenuItem.Size = new Size(66, 20);
+            cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // gfdgdToolStripMenuItem
             // 
-            this.gfdgdToolStripMenuItem.Name = "gfdgdToolStripMenuItem";
-            this.gfdgdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gfdgdToolStripMenuItem.Text = "Agenda";
-            this.gfdgdToolStripMenuItem.Click += new System.EventHandler(this.gfdgdToolStripMenuItem_Click);
+            gfdgdToolStripMenuItem.Name = "gfdgdToolStripMenuItem";
+            gfdgdToolStripMenuItem.Size = new Size(180, 22);
+            gfdgdToolStripMenuItem.Text = "Agenda";
+            gfdgdToolStripMenuItem.Click += gfdgdToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // cEPToolStripMenuItem
             // 
-            this.cEPToolStripMenuItem.Name = "cEPToolStripMenuItem";
-            this.cEPToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.cEPToolStripMenuItem.Text = "CEP";
-            this.cEPToolStripMenuItem.Click += new System.EventHandler(this.cEPToolStripMenuItem_Click);
+            cEPToolStripMenuItem.Name = "cEPToolStripMenuItem";
+            cEPToolStripMenuItem.Size = new Size(40, 20);
+            cEPToolStripMenuItem.Text = "CEP";
+            cEPToolStripMenuItem.Click += cEPToolStripMenuItem_Click;
             // 
             // sobreToolStripMenuItem
             // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            sobreToolStripMenuItem.Size = new Size(49, 20);
+            sobreToolStripMenuItem.Text = "Sobre";
+            sobreToolStripMenuItem.Click += sobreToolStripMenuItem_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 511);
-            this.Controls.Add(this.menuStripMainForm);
-            this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStripMainForm;
-            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.Name = "MainForm";
-            this.Text = "MDI";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStripMainForm.ResumeLayout(false);
-            this.menuStripMainForm.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(11F, 22F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1009, 768);
+            Controls.Add(menuStripMainForm);
+            Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
+            MainMenuStrip = menuStripMainForm;
+            Margin = new Padding(6, 4, 6, 4);
+            Name = "MainForm";
+            Text = "MDI";
+            Load += MainForm_Load;
+            menuStripMainForm.ResumeLayout(false);
+            menuStripMainForm.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

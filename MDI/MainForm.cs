@@ -3,7 +3,7 @@ namespace MDI
 {
     public partial class MainForm : Form
     {
-        
+
         Agenda? AgendaForm;
         CEP? CEPForm;
         Sobre? SobreForm;
@@ -16,7 +16,7 @@ namespace MDI
 
         private void gfdgdToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(AgendaForm == null)
+            if (AgendaForm == null)
             {
                 AgendaForm = new Agenda();
                 AgendaForm.MdiParent = this;
@@ -31,7 +31,7 @@ namespace MDI
 
         private void cEPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(CEPForm == null)
+            if (CEPForm == null)
             {
                 CEPForm = new CEP();
                 CEPForm.MdiParent = this;
